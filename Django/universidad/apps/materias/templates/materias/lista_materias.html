@@ -1,0 +1,16 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Materias</title>
+</head>
+<body>
+    <h1>Materias disponibles</h1>
+    <ul>
+        {% for materia in materias %}
+            <li>{{ materia.nombre }} - Créditos: {{ materia.creditos }}</li>
+        {% empty %}
+            <li>No hay materias registradas.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
